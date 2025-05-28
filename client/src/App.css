@@ -1,0 +1,26 @@
+/* import React from "react";
+import Spline from "@splinetool/react-spline";
+
+const App = () => {
+  return (
+    <div className="relative h-screen">
+    
+      <Spline
+        scene="https://prod.spline.design/EPDBxi3OvUGFfB0O/scene.splinecode"
+        className="w-full h-full"
+      />
+
+     
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl text-center z-10 font-bold bg-black bg-opacity-50 p-8">
+        <h1 className="text-3xl">About Me</h1>
+        <p className="mt-4">
+          Hi, I'm Bharath, a web developer passionate about creating interactive
+          and responsive web applications. I love working with new technologies
+          and learning about AI, Flutter, and full-stack development.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default App; */
