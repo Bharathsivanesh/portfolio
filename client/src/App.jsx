@@ -6,10 +6,12 @@ import Homeview from "./layout/Home-view";
 import About from "./pages/about";
 import Skills from "./pages/skills";
 import Projects from "./pages/projects";
+import BackgroundParticles from "./components/BackgroundParticles";
 
 const App = () => {
   return (
     <BrowserRouter>
+      {/* <BackgroundParticles /> */}
       <Routes>
         <Route path="/" element={<Homeview />}>
           <Route index element={<Home />} />

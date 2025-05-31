@@ -17,6 +17,7 @@ const Homeview = () => {
             muted
             playsInline
           />
+          {/* <Spline scene="https://prod.spline.design/EPDBxi3OvUGFfB0O/scene.splinecode" /> */}
         </div>
         <div className="z-10 flex flex-col ">
           <Navbar />
