@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import About from "./about";
 import Skills from "./skills";
 import Projects from "./projects";
+import Contact from "./contact";
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
         <div className="md:mt-44 flex flex-col gap-2">
           <About />
           <Projects />
+          <Contact />
 
           {/* <contact /> */}
         </div>

@@ -7,6 +7,7 @@ import About from "./pages/about";
 import Skills from "./pages/skills";
 import Projects from "./pages/projects";
 import BackgroundParticles from "./components/BackgroundParticles";
+import Contact from "./pages/contact";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>
