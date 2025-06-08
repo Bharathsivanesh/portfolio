@@ -9,15 +9,15 @@ const Homeview = () => {
     <>
       <div className="min-h-screen relative flex flex-col  ">
         <div className="absolute  inset-0 w-full h-full z-0">
-          <video
+          {/* <video
             className="w-full h-full object-cover"
             src={bg}
             autoPlay
             loop
             muted
             playsInline
-          />
-          {/* <Spline scene="https://prod.spline.design/EPDBxi3OvUGFfB0O/scene.splinecode" /> */}
+          /> */}
+          <Spline scene="https://prod.spline.design/EPDBxi3OvUGFfB0O/scene.splinecode" />
         </div>
         <div className="z-10 flex flex-col ">
           <Navbar />
