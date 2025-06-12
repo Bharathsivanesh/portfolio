@@ -11,7 +11,7 @@ const Homeview = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setloading(false);
-    }, 2000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -44,7 +44,7 @@ const Homeview = () => {
           />
           {/* <Spline scene="https://prod.spline.design/EPDBxi3OvUGFfB0O/scene.splinecode" /> */}
         </div>
-        <div className="z-10 flex flex-col ">
+        <div className="z-10 flex flex-col  ">
           <Navbar />
           <Outlet />
         </div>

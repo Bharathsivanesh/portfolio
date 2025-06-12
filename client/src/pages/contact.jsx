@@ -9,16 +9,17 @@ import Facebook from "../assets/Facebook F.png";
 const Contact = () => {
   return (
     <>
-      <div className="flex flex-col mt-24 w-full">
+      <div className="flex flex-col mt-16 w-full overflow-hidden ">
         <div
           data-aos="fade-down"
           data-aos-duration="2000"
-          className="flex flex-col text-white justify-center  gap-8 items-center"
+          className="flex flex-col mt-24 text-white justify-center  gap-8 items-center"
         >
           <div className="relative flex items-center justify-center  ">
             <h1 className="absolute text-center text-5xl font-permanent  left-1/2 -translate-x-1/2 opacity-30">
               CONTACT
             </h1>
+
             <h2 className="z-10  text-center  relative text-3xl font-black ">
               Get In <span className="text-purple-500">Touch</span>
             </h2>
@@ -56,14 +57,24 @@ const Contact = () => {
               <img src={mail} className="w-10 h-12" />
               <div className="flex flex-col justify-center">
                 <p>MAIL ME</p>
-                <p>bharath@gmail.com</p>
+                <p
+                  onClick={() => {
+                    window.location.href = "mailto:bharathsivanesh@gmail.com";
+                  }}
+                  role="link"
+                  className="cursor-pointer"
+                >
+                  bharath@gmail.com
+                </p>
               </div>
             </div>
             <div className="flex flex-row gap-4">
               <img src={phone} className="w-10 h-12" />
               <div className="flex flex-col justify-center">
-                <p>MAIL ME</p>
-                <p>bharath@gmail.com</p>
+                <p>CALL ME</p>
+                <a href="tel:+919025368695">
+                  <p>+91 9025368695</p>
+                </a>
               </div>
             </div>
             <div className="flex  mt-8  md:mt-0 flex-row gap-6">
