@@ -7,10 +7,18 @@ const About = () => {
     <>
       <div className=" justify-center flex">
         <div className="flex flex-col md:flex-row w-4/5  md:gap-12  h-full  justify-center items-center">
-          <div className="md:w-1/2 w-2/3">
+          <div
+            className="md:w-1/2 w-2/3"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
             <img src={img} />
           </div>
-          <div className="md:w-1/2 p-4 md:p-0 md:h-screen flex items-center gap-8 md:gap-24 flex-col ">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            className="md:w-1/2 p-4 md:p-0 md:h-screen flex items-center gap-8 md:gap-24 flex-col "
+          >
             <h1 className="font-permanent text-3xl md:text-5xl text-white ">
               <span className="text-purple-500 px-6">About</span>Me
             </h1>

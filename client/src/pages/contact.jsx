@@ -10,7 +10,11 @@ const Contact = () => {
   return (
     <>
       <div className="flex flex-col mt-24 w-full">
-        <div className="flex flex-col text-white justify-center  gap-8 items-center">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="flex flex-col text-white justify-center  gap-8 items-center"
+        >
           <div className="relative flex items-center justify-center  ">
             <h1 className="absolute text-center text-5xl font-permanent  left-1/2 -translate-x-1/2 opacity-30">
               CONTACT
@@ -32,7 +36,11 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row w-full text-white mt-8 px-8">
-          <div className="flex flex-col gap-8 p-8 w-full  md:w-1/2 ">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            className="flex flex-col gap-8 p-8 w-full  md:w-1/2 "
+          >
             {/* left */}
 
             <div className="md:text-left text-center w-full flex flex-col">
@@ -74,7 +82,11 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex flex-col p-6 gap-8 ">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            className="flex flex-col p-6 gap-8 "
+          >
             {/* forms */}
             <div className="flex flex-col md:flex-row gap-8">
               <input

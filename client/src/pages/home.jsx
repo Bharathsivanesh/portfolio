@@ -9,7 +9,11 @@ const Home = () => {
   return (
     <>
       <div className="flex flex-col ">
-        <div className="flex flex-col  gap-4 md:gap-8  md:justify-center text-center items-center mt-16 md:h-96 h-48">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="flex flex-col  gap-4 md:gap-8  md:justify-center text-center items-center mt-16 md:h-96 h-48"
+        >
           <div>
             <h1 className="text-white text-3xl md:text-5xl font-permanent">
               Hi, <span className="text-purple-500">I'm </span>Bharath

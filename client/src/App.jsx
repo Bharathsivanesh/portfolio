@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home";
@@ -8,8 +8,12 @@ import Skills from "./pages/skills";
 import Projects from "./pages/projects";
 import BackgroundParticles from "./components/BackgroundParticles";
 import Contact from "./pages/contact";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const App = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <BrowserRouter>
       {/* <BackgroundParticles /> */}
