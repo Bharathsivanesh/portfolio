@@ -16,14 +16,14 @@ const Home = () => {
         >
           <div>
             <h1 className="text-white text-3xl md:text-5xl font-permanent">
-              Hi, <span className="text-purple-500">I'm </span>Bharath
+              Hi👋, <span className="text-purple-500">I'm </span>Bharath
             </h1>
           </div>
           <div className="md:max-w-3xl p-3">
-            <h2 className="text-gray-200  text-sm md:text-3xl font-light font-serif">
-              I'm a passionate web developer who enjoys building beautiful and
-              functional websites. Currently exploring React and the MERN stack.
-              Let's build something amazing together!
+            <h2 className="text-gray-200  text-sm md:text-3xl font-light font-sedan">
+              I'm an engineering student who loves solving problems I create
+              websites and mobile apps to make things easier, I enjoy building
+              useful products that help people in daily life.
             </h2>
           </div>
         </div>

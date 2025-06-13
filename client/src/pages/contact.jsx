@@ -1,12 +1,43 @@
-import React from "react";
-import mail from "../assets/mail.png";
+import React, { useRef, useState } from "react";
+import mailu from "../assets/mail.png";
 import phone from "../assets/Phone.png";
 import twitter from "../assets/twitter.png";
 import LinkedIn from "../assets/LinkedIn.png";
 import GitHub from "../assets/GitHub.png";
 import Facebook from "../assets/Facebook F.png";
+import emailjs from "emailjs-com";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Contact = () => {
+  const [name, setname] = useState("");
+  const [mail, setmail] = useState("");
+  const [loading, setloading] = useState(false);
+  const [message, setmessage] = useState("");
+  const form = useRef();
+  const handle = (e) => {
+    e.preventDefault();
+
+    // emailjs
+    //   .sendForm("service_9p67n3j", "template_16l1uuk", form.current, {
+    //     publicKey: "wwVZVFgfBCrIl_7pL",
+    //   })
+    //   .then(
+    //     () => {
+    //       console.log("SUCCESS!");
+    //     },
+    //     (error) => {
+    //       console.log("FAILED...", error.text);
+    //     }
+    //   );
+    setloading(true);
+    setTimeout(() => {
+      setloading(false);
+    }, 3000);
+    setmail("");
+    setname("");
+    setmessage("");
+  };
+
   return (
     <>
       <div className="flex flex-col mt-16 w-full overflow-hidden ">
@@ -54,7 +85,7 @@ const Contact = () => {
               </p>
             </div>
             <div className="flex mt-8 md:mt-0 flex-row gap-4 ">
-              <img src={mail} className="w-10 h-12" />
+              <img src={mailu} className="w-10 h-12" />
               <div className="flex flex-col justify-center">
                 <p>MAIL ME</p>
                 <p
@@ -78,57 +109,90 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex  mt-8  md:mt-0 flex-row gap-6">
-              <div className="bg-purple-500 rounded-full w-10 h-10 p-2 cursor-pointer">
-                <img src={twitter} alt="" />
-              </div>
-              <div className="bg-purple-500 rounded-full w-10 h-10 p-2 cursor-pointer">
-                <img src={LinkedIn} alt="" />
-              </div>
-              <div className="bg-purple-500 rounded-full w-10 h-10 p-2 cursor-pointer">
-                <img src={GitHub} alt="" />
-              </div>
-              <div className="bg-purple-500 rounded-full w-10 h-10 p-2 cursor-pointer">
-                <img src={Facebook} alt="" className="w-16 h-6" />
-              </div>
+              <a href="https://www.facebook.com/share/162eLiqrCt/">
+                <div className="bg-purple-500 rounded-full w-10 h-10 p-2 cursor-pointer">
+                  <img src={twitter} alt="" />
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/bharathsivanesh"
+                target="_blank"
+              >
+                <div className="bg-purple-500 rounded-full w-10 h-10 p-2 cursor-pointer">
+                  <img src={LinkedIn} alt="" />
+                </div>
+              </a>
+              <a href="https://github.com/Bharathsivanesh">
+                <div className="bg-purple-500 rounded-full w-10 h-10 p-2 cursor-pointer">
+                  <img src={GitHub} alt="" />
+                </div>
+              </a>
+              <a href="https://www.facebook.com/share/162eLiqrCt/">
+                <div className="bg-purple-500 rounded-full w-10 h-10 p-2 cursor-pointer">
+                  <img src={Facebook} alt="" className="w-16 h-6" />
+                </div>
+              </a>
             </div>
           </div>
 
-          <div
-            data-aos="fade-left"
-            data-aos-duration="2000"
-            className="flex flex-col p-6 gap-8 "
-          >
-            {/* forms */}
-            <div className="flex flex-col md:flex-row gap-8">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="h-12 rounded-lg text-center bg-[#272727]"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="h-12 text-center rounded-lg bg-[#272727]"
-              />
-              <input
-                type="text"
-                placeholder="Email"
-                className="h-12  text-center rounded-lg bg-[#272727]"
-              />
-            </div>
-            <div>
+          <form onSubmit={handle} ref={form} className="w-full md:w-1/2">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              className="flex flex-col p-6 gap-8"
+            >
+              <div className="flex flex-col md:flex-row gap-8">
+                <input
+                  name="name"
+                  value={name}
+                  onChange={(e) => setname(e.target.value)}
+                  type="text"
+                  placeholder="First Name"
+                  required
+                  className="h-12 rounded-lg text-center bg-[#272727] w-full"
+                />
+                <input
+                  name="email"
+                  value={mail}
+                  onChange={(e) => setmail(e.target.value)}
+                  type="email"
+                  placeholder="Email"
+                  required
+                  className="h-12 text-center rounded-lg bg-[#272727] w-full"
+                />
+              </div>
+
               <textarea
+                name="message"
+                value={message}
+                onChange={(e) => setmessage(e.target.value)}
+                placeholder="Let's Talk Something"
+                required
                 rows="4"
-                cols="50"
-                className="w-full rounded-lg bg-[#272727]"
+                className="w-full rounded-lg text-center bg-[#272727]"
               />
+
+              {/* Submit Button + Lottie (same space) */}
+              <div className="h-12 flex justify-center md:justify-start items-center">
+                {!loading ? (
+                  <input
+                    type="submit"
+                    value="Submit"
+                    className="bg-purple-500 font-sedan text-white px-5 rounded-lg py-2 cursor-pointer"
+                  />
+                ) : (
+                  <div className="w-60 h-60 flex items-center">
+                    <DotLottieReact
+                      src="https://lottie.host/06a53ab4-8a77-45b0-ae20-8c9b60b5e200/Cz8Xjf0Gyf.lottie"
+                      loop
+                      autoplay
+                      style={{ width: "100%", height: "100%" }}
+                    />
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="flex justify-center md:justify-start">
-              <button className="bg-purple-500 font-sedan text-white px-5 rounded-lg py-2">
-                Send Message
-              </button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </>
